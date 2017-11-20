@@ -19,4 +19,5 @@ from my_matric2016_app import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^hello/', views.HelloWorld, name = 'hello'),
+	url(r'^restful_api/', views.APIView.as_view(), name = 'restful_api')
 ]
