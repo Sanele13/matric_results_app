@@ -27,7 +27,7 @@ SECRET_KEY = '$4fb#t%16-+2xz*=a0cjsi^drxi9$)drkh-=gs4vh$xx!6p@gu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['matric2016.herokuapp.com']
 
 
 # Application definition
