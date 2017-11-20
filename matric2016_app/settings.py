@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'my_matric2016_app',
+	'rest_framework',
 ]
 
 MIDDLEWARE = [
