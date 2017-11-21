@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^hello/', views.HelloWorld, name = 'hello'),
 	url(r'^restful_api/', views.APIView.as_view(), name = 'restful_api'),
-	url(r'^$', views.index, name = 'home')
+	url(r'^$', views.index, name = 'home'),
+	url(r'^loadCSVdata/', views.loadCSVdata, name = 'loadCSVData')
 ]
