@@ -26,3 +26,4 @@ def index(request):
     content = "<h1>DB content</h1><br>"
     for entry in entries:
         content = content + entry.name + "<br>"
+    return HttpResponse(content)
