@@ -16,4 +16,4 @@ class matric_app_model(models.Model):
     #province = models.TextField(max_length = 2)
     
     class Meta:
-        db_table = "matric_history"
+        db_table = "matric2016_app"
