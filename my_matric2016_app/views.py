@@ -17,3 +17,12 @@ class APIView(generics.ListCreateAPIView):
 	
     def perform_create(self, serializer):
         serializer.save()
+
+def index(request):
+    #read and display DB content
+    
+	#get every DB entry
+    entries = matric_app_model.objects.all()
+    content = "<h1>DB content</h1><br>"
+    for entry in entries:
+        content = content + entry.name + "<br>"
