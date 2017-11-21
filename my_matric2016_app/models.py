@@ -13,7 +13,7 @@ class matric_app_model(models.Model):
     passed_2016 = models.TextField(max_length=100)
 	
 	#add an extra field for 'province'
-    province = models.TextField(max_length = 2)
+    #province = models.TextField(max_length = 2)
     
     class Meta:
         db_table = "matric_history"
