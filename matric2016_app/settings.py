@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'matric2016_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
-		'USER':'root',
-		'PASSWORD':'zukiswa',
-		'HOST':'127.0.0.1',
-		'PORT':'3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd338a782pecr9b',
+		'USER':'rxtgqfxfcogpjk',
+		'PASSWORD':'d5644497df9db5ba0662be23d640c1dab93d7bfb4aad01cc23c3061bcb4ba2fa',
+		'HOST':'ec2-23-21-101-174.compute-1.amazonaws.com',
+		'PORT':'5432',
     }
 }
 
