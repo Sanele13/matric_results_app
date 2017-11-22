@@ -26,7 +26,7 @@ def index(request):
     cur=conn.cursor()
 #get number of students who wrote and those who passed, given 'year' and 'province'
     def getData(year,province):
-        cur.execute("select wrote_"+year+",passed_"+year+" from test_table where province='"+province+"'")
+        cur.execute("select wrote_"+year+",passed_"+year+" from matric2016_app where province='"+province+"'")
         rows=cur.fetchall()
         return rows
 
@@ -52,8 +52,8 @@ def index(request):
         return sum
 	#Displaying graphs and things
     head = "<html><head><title>Matric Results</title><script src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js'></script><link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'></head>"
-    body = "<body><div style = 'width:40%;height:40%'><canvas id = 'chart'></canvas></div><script>var myChart = document.getElementById('chart').getContext('2d');var barChart = new Chart(myChart, {type: 'bar',data:{labels:['EC','WC','KZ','LP','NC','NW','FS','MP','GA'],"
-    datasets="datasets:[{label:'Wrote',data:["+str(num_wrote(getData('2014','EC')))+","+str(num_wrote(getData('2014','WC')))+",74,95,82,49,78,92,68],backgroundColor:'black',},{label:'Passed',data:[60,70,52,81,69,49,43,58,49],backgroundColor:'green'},]},"
+    body = "<body><div style = 'width:40%;height:40%'><canvas id = 'chart'></canvas></div><script>var myChart = document.getElementById('chart').getContext('2d');var barChart = new Chart(myChart, {type: 'bar',data:{labels:['EC','WC','KZ','LP','NC','NW','FS','MP','GP'],"
+    datasets="datasets:[{label:'Wrote',data:["+str(num_wrote(getData('2014','EC')))+","+str(num_wrote(getData('2014','WC')))+","+str(num_wrote(getData('2014','KZ')))+","+str(num_wrote(getData('2014','LP')))+","+str(num_wrote(getData('2014','NC')))+","+str(num_wrote(getData('2014','NW')))+","+str(num_wrote(getData('2014','FS')))+","+str(num_wrote(getData('2014','MP')))+","+str(num_wrote(getData('2014','GP')))+"],backgroundColor:'black',},{label:'Passed',data:[60,70,52,81,69,49,43,58,49],backgroundColor:'green'},]},"
     rest ="options:{scales:{xAxes:[{scaleLabel:{display:true,labelString: 'Provinces'}}],yAxes:[{scaleLabel:{display:true,labelString: 'Number of Students'}}]}}})</script></body></html>"
 	
     content = head+body+datasets+rest
