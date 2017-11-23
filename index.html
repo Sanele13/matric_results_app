@@ -6,27 +6,27 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "chart2014">
 		</canvas>
 	</div><br/>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "pass_rate_chart2014">
 		</canvas>
 	</div><br>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "chart2015">
 		</canvas>
 	</div><br>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "pass_rate_chart2015">
 		</canvas>
 	</div><br>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "chart2016">
 		</canvas>
 	</div><br>
-	<div style = 'width:40%;height:40%'>
+	<div class = 'container'>
 		<canvas id = "pass_rate_chart2016">
 		</canvas>
 	</div>
@@ -84,12 +84,7 @@
 			},
 			options:{
 				scales:{
-					xAxes:[{
-						scaleLabel:{
-						display:true,
-						//labelString: 'Provinces'
-						}
-					}],
+					xAxes:[{ticks:{beginAtZero:true, min:0}}],
 				yAxes:[{
 						scaleLabel:{
 						display:true,
