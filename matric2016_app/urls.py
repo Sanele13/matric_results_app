@@ -21,5 +21,5 @@ urlpatterns = [
 	url(r'^hello/', views.HelloWorld, name = 'hello'),
 	url(r'^restful_api/', views.APIView.as_view(), name = 'restful_api'),
 	url(r'^$', views.index, name = 'home'),
-	url(r'^loadCSVdata/', views.loadCSVdata, name = 'loadCSVData')
+	url(r'^schoolData/(?P<schoolName>\w{0,50})/$', views.schoolData, name = 'schoolData')
 ]
